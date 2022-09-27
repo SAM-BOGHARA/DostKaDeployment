@@ -1,3 +1,4 @@
+from crypt import methods
 import MainRepo
 from flask import Flask, render_template, redirect, session, send_file, request
 from flask_mail import Mail, Message
