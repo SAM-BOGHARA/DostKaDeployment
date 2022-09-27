@@ -9,10 +9,10 @@ import os
 app = Flask(__name__)
 
 
-# if(os.environ.get('ENV') == "Production"):
-#     app.config.from_object("config.ProductionConfig")
-# else:
-#     app.config.from_object("config.DevelopmentConfig")
+if(os.environ.get('ENV') == "Production"):
+    app.config.from_object("config.ProductionConfig")
+else:
+    app.config.from_object("config.DevelopmentConfig")
 
 mail = Mail(app)
 db = MainRepo.Repo(app.config)
